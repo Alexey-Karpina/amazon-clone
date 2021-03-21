@@ -1,0 +1,21 @@
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.slider__container{
+    position: relative;
+}
+
+.slider__control{
+    width: 34px;
+    height: 52px;
+    position: absolute;
+}
+
+.slider__next{
+    background-image: url('../../../images/icon-arrow-right.png');
+}
+
+.slider__prev{
+    background-image: url('../../../images/icon-arrow-left.png');
+}

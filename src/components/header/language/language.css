@@ -1,5 +1,6 @@
 .header__language{
     font-size: 0;
+    min-width: 52px;
 }
 
 .header__language::after{

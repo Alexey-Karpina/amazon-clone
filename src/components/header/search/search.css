@@ -1,7 +1,7 @@
 .header__search {
   font-size: 0;
   height: 40px;
-  width: 60%;
+  width: 55%;
   display: flex;
 }
 .header__department,
@@ -20,7 +20,7 @@
   border-bottom-left-radius: 5px;
 }
 .search__info {
-  width: 80%;
+  width: 100%;
 }
 .search__submit {
   width: 40px;
