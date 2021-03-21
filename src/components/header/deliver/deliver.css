@@ -1,0 +1,23 @@
+.header__delivery {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-left: 20px;
+  color: #ffffff;
+}
+.header__delivery::before {
+  position: absolute;
+  left: -20px;
+  bottom: 5px;
+  display: block;
+  content: "";
+  background-image: url("../../../images/deliver-mark.png");
+  width: 15px;
+  height: 18px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header__delivery svg {
+  fill: #ffffff;
+}

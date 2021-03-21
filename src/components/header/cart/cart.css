@@ -1,0 +1,10 @@
+.header__cart{
+    position: relative;
+    color: #ffffff;
+}
+
+.cart__count{
+    position: absolute;
+    left: 18px;
+    color: #f08804;
+}

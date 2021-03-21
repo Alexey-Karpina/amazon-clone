@@ -1,0 +1,11 @@
+.header__language{
+    font-size: 0;
+}
+
+.header__language::after{
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 10px;
+    color: #ffffff;
+    content: "\25BC";
+}

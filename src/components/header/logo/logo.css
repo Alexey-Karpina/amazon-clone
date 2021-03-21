@@ -1,0 +1,10 @@
+.header__logo {
+  font-size: 0;
+  display: inline-block;
+}
+.header__logo:hover {
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: #fff;
+  outline: 0;
+}

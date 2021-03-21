@@ -1,0 +1,7 @@
+.page__header{
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #131921;
+}
