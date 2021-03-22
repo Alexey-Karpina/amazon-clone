@@ -1,24 +1,45 @@
 import React from "react";
-
-import productImage from "../../../../images/product1.png";
+import { useStateValue } from "../../../../context/stateProvider";
 
 import "./productItem.css";
 
-const ProductItem = ({ key }) => {
+const ProductItem = ({ id, name, rating, category, price, image }) => {
+  const [{cart}, dispatch] = useStateValue();
+
+  console.log(cart.length);
+
+  const addToCart = () => {
+    dispatch({
+      type: "ADD_TO_CART",
+      item: {
+        id: id,
+        title: name,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
   return (
-    <li className="products__item" key={key}>
-      <img src={productImage} alt="Product" className="products__img" />
-      <span className="products__name">
-        TCL 50-inch Class 4-Series 4K UHD Smart Roku LED TV - 50S435, 2021 Model
-      </span>
+    <li className="products__item" key={id}>
+      <img src={image} alt="Product" className="products__img" />
+      <span className="products__name">{name}</span>
       <ul className="products__rating">
-        <li>&#9733;</li>
+        {Array(rating)
+          .fill()
+          .map((_, i) => (
+            <li>&#9733;</li>
+          ))}
       </ul>
-      <span className="products__category">Electronics</span>
-      <strong className="products__price">{`$169.00`}</strong>
+      <span className="products__category">{category}</span>
+      <strong className="products__price">{`$${price}`}</strong>
       <small className="products__ships">Ships to Ukraine</small>
-      <span className="products__certified">Amazon Certified: Works with Alexa</span>
-      <button className="products__add">Add to Cart</button>
+      <span className="products__certified">
+        Amazon Certified: Works with Alexa
+      </span>
+      <button className="products__add" onClick={addToCart}>
+        Add to Cart
+      </button>
     </li>
   );
 };

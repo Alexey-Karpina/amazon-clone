@@ -1,14 +1,18 @@
 import React from 'react'
+import { useStateValue } from '../../../context/stateProvider';
 
-import cart from '../../../images/icon-cart.png';
+import cartIcon from '../../../images/icon-cart.png';
 import './cart.css';
 
 const Cart = () => {
+
+    const [{cart}] = useStateValue();
+
     return (
         <div className="header__cart">
-            <img src={cart} alt="Cart"/>
+            <img src={cartIcon} alt="Cart"/>
             <strong>Cart</strong>
-            <strong className="cart__count">0</strong>
+            <strong className="cart__count">{cart?.length}</strong>
         </div>
     )
 }
