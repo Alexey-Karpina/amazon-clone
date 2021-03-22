@@ -1,21 +1,41 @@
-.wrapper{
-    max-width: 1500px;
-    margin: 0 auto;
+.slider__container {
+  position: relative;
 }
-.slider__container{
-    position: relative;
+.slider__container::before {
+  background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #eaeded);
+  bottom: 0;
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00EAEDED', endColorstr='#EAEDED', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00EAEDED', endColorstr='#EAEDED',GradientType=0)";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 250px;
+  z-index: 1;
 }
 
-.slider__control{
-    width: 34px;
-    height: 52px;
-    position: absolute;
+.slick-arrow {
+  width: 80px;
+  height: 250px;
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 125px;
+  z-index: 1;
+}
+.slick-arrow::before {
+  display: none;
 }
 
-.slider__next{
-    background-image: url('../../../images/icon-arrow-right.png');
+
+.slick-next {
+  background-image: url("../../../images/icon-arrow-right.png");
+  right: 0;
 }
 
-.slider__prev{
-    background-image: url('../../../images/icon-arrow-left.png');
+.slick-prev {
+  background-image: url("../../../images/icon-arrow-left.png");
+  left: 0;
 }

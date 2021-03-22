@@ -1,0 +1,10 @@
+.wrapper{
+    max-width: 1500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.page__main{
+    background: #EAEDED;
+    height: 100vh;
+}

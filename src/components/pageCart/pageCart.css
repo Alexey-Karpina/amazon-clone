@@ -1,0 +1,7 @@
+.page__cart{
+    display: flex;
+    justify-content: space-between;
+    background: #EAEDED;
+    height: 100%;
+    padding: 20px;
+}

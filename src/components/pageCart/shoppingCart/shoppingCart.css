@@ -1,0 +1,23 @@
+.cart__shopping {
+  padding: 20px;
+  background: #ffffff;
+  width: 100%;
+  margin-right: 20px;
+}
+.cart__header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+}
+.cart__title {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.cart__select{
+    margin-bottom: 20px;
+}
+.cart__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

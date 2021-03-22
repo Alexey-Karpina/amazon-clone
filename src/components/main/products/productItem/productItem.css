@@ -1,0 +1,32 @@
+.products__item{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 270px;
+    min-height: 540px;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid #ddd;
+}
+
+.products__img{
+    margin: 50px 0;
+}
+
+.products__name{
+    margin-bottom: 4px;
+}
+
+.products__rating{
+    margin: 0 0 4px 0;
+    padding: 0;
+    list-style: none;
+    color: rgb(255, 208, 0);
+}
+
+.products__add{
+    margin: auto 0;
+    padding: 10px 0;
+    background-color: #E67A00;
+    color: #ffffff;
+    cursor: pointer;
+}

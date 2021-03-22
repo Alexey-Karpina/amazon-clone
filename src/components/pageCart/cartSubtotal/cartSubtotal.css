@@ -1,0 +1,19 @@
+.cart__subtotal {
+    position: sticky;
+    top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background: #ffffff;
+  width: 20%;
+  height: 200px;
+}
+.cart__checkout {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #f0c14b;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
