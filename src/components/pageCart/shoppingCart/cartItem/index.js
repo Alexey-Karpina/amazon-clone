@@ -2,7 +2,7 @@ import React from "react";
 
 import "./cartItem.css";
 
-const CartItem = ({img, name, price}) => {
+const CartItem = ({img, name, price, onDelete}) => {
   return (
     <>
       <li className="cart__item">
@@ -19,7 +19,7 @@ const CartItem = ({img, name, price}) => {
             </span>
             <small className="item__avail">In Stock</small>
             <span className="item__qty">{`Qty: 1`}</span>
-            <button className="cart__checkout">Remove from Cart</button>
+            <button className="cart__checkout" onClick={onDelete}>Remove from Cart</button>
           </div>
         </div>
         <div className="item__right">
