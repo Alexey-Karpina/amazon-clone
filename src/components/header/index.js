@@ -8,8 +8,11 @@ import Language from "./language";
 import Account from "./account";
 import Orders from "./orders";
 import Cart from "./cart";
+import { useStateValue } from "../../context/stateProvider";
 
 const Header = () => {
+    const [{ user }] = useStateValue();
+
   return (
     <header className="page__header">
       <Link to="/">
@@ -18,7 +21,9 @@ const Header = () => {
       <Deliver />
       <Search />
       <Language />
-      <Account />
+      <Link to={!user && "/login"}>
+        <Account />
+      </Link>
       <Orders />
       <Link to="/cart">
         <Cart />

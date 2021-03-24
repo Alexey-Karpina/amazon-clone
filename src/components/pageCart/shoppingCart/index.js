@@ -4,7 +4,14 @@ import CartItem from "./cartItem";
 
 import "./shoppingCart.css";
 const ShoppingCart = () => {
-  const [{ cart }] = useStateValue();
+  const [{ cart }, dispatch] = useStateValue();
+
+  const onDelete = (id) => {
+    dispatch({
+      type: "REMOVE_FROM_CART",
+      payload: id,
+    });
+  };
 
   return (
     <section className="cart__shopping">
@@ -15,8 +22,15 @@ const ShoppingCart = () => {
       <ul className="cart__list">
         {cart.map((item) => {
           console.log(item);
-          const { image, price, title } = item;
-          return <CartItem img={image} name={title} price={price} />;
+          const { image, price, title, id } = item;
+          return (
+            <CartItem
+              img={image}
+              name={title}
+              price={price}
+              onDelete={() => onDelete(id)}
+            />
+          );
         })}
       </ul>
     </section>
