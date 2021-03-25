@@ -8,7 +8,7 @@ import { useStateValue } from "./context/stateProvider";
 import { auth } from "./firebase";
 
 const App = () => {
-  const [{}, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
