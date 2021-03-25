@@ -5,4 +5,3 @@ deploy:
     secure: $FIREBASE_TOKEN
   project: "clone-82833"
   message: "Deploying!!!"
-view raw.travis.yml hosted with ❤ by GitHub
