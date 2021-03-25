@@ -15,6 +15,7 @@ const Header = () => {
 
   return (
     <header className="page__header">
+        <h1>Test For New GH Actions</h1>
       <Link to="/">
         <Logo />
       </Link>
