@@ -13,7 +13,7 @@ type ActionType = {
 };
 
 export const initialState = {
-  cart: [] as Array<CartType>,
+  cart: [] as Array<CartType> | any,
   user: null as any,
 };
 
@@ -30,7 +30,10 @@ export const getCartTotal = (cart: Array<CartType>): number => {
   return cart?.reduce((total: number, item: CartType) => item.price + total, 0);
 };
 
-const reducer = (state = initialState, action: ActionType) => {
+const reducer = (
+  state = initialState,
+  action: ActionType
+): InitialStateType => {
   switch (action.type) {
     case "ADD_TO_CART":
       return {

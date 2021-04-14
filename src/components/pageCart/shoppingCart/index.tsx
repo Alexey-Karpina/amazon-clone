@@ -3,10 +3,19 @@ import { useStateValue } from "../../../context/stateProvider";
 import CartItem from "./cartItem";
 
 import "./shoppingCart.css";
+
+type CartType = {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+  rating: number;
+};
+
 const ShoppingCart = () => {
   const [{ cart }, dispatch] = useStateValue();
 
-  const onDelete = (id) => {
+  const onDelete = (id: number) => {
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: id,
@@ -20,7 +29,7 @@ const ShoppingCart = () => {
         <small className="cart__select">Deselect all items</small>
       </div>
       <ul className="cart__list">
-        {cart.map((item) => {
+        {cart.map((item: CartType) => {
           console.log(item);
           const { image, price, title, id } = item;
           return (

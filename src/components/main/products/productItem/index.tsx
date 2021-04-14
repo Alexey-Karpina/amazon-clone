@@ -3,10 +3,24 @@ import { useStateValue } from "../../../../context/stateProvider";
 
 import "./productItem.css";
 
-const ProductItem = ({ id, name, rating, category, price, image }) => {
-  const [{cart}, dispatch] = useStateValue();
+type ProductItemType = {
+  id: number;
+  name: string;
+  rating: number;
+  category: string;
+  price: number;
+  image: string;
+};
 
-  console.log(cart.length);
+const ProductItem = ({
+  id,
+  name,
+  rating,
+  category,
+  price,
+  image,
+}: ProductItemType) => {
+  const [{}, dispatch] = useStateValue();
 
   const addToCart = () => {
     dispatch({
@@ -26,7 +40,7 @@ const ProductItem = ({ id, name, rating, category, price, image }) => {
       <span className="products__name">{name}</span>
       <ul className="products__rating">
         {Array(rating)
-          .fill()
+          .fill(undefined)
           .map((_, i) => (
             <li>&#9733;</li>
           ))}
