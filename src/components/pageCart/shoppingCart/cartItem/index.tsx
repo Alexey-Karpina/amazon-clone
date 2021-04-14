@@ -2,7 +2,18 @@ import React from "react";
 
 import "./cartItem.css";
 
+<<<<<<< HEAD:src/components/pageCart/shoppingCart/cartItem/index.js
 const CartItem = ({img, name, price, onDelete}) => {
+=======
+type CartItemType = {
+  name: string;
+  img: string;
+  price: number;
+  onDelete: any;
+};
+
+const CartItem = ({img, name, price, onDelete}: CartItemType ) => {
+>>>>>>> Develop:src/components/pageCart/shoppingCart/cartItem/index.tsx
   return (
     <>
       <li className="cart__item">
